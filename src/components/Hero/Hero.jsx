@@ -1,11 +1,13 @@
+/* eslint-disable react/no-children-prop */
 import React, { useContext, useState, useEffect } from 'react';
+import TextLoop from 'react-text-loop';
 import { Container } from 'react-bootstrap';
-import { Fade, Flip } from 'react-reveal';
+import { Fade } from 'react-reveal';
 import PortfolioContext from '../../context/context';
 
 const Header = () => {
   const { hero } = useContext(PortfolioContext);
-  const { title, networks } = hero;
+  const { title, networks, technologies } = hero;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -28,9 +30,14 @@ const Header = () => {
           <h3 className="hero-subtitle">
             <span className="text-secondary">{'<'}</span>
             Desarrollador&nbsp;
-            <Flip className="d-inline">
-              <span className="text-primary d-inline">Web</span>
-            </Flip>
+            {technologies && (
+              <TextLoop
+                className="text-primary"
+                interval={2500}
+                adjustingSpeed={200}
+                children={technologies}
+              />
+            )}
             <span className="text-secondary">{'/>'}</span>
           </h3>
 

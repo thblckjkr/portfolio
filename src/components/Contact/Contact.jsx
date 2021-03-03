@@ -6,12 +6,12 @@ import Title from '../Title/Title';
 
 const Contact = () => {
   const { contact } = useContext(PortfolioContext);
-  const { cta, btn, email } = contact;
+  const { title, cta, btn, email } = contact;
 
   return (
     <section id="contact">
       <Container>
-        <Title title="Contact" />
+        <Title title={title} />
         <Fade bottom duration={1000} delay={800} distance="30px">
           <div className="contact-wrapper">
             <p className="contact-wrapper__text">

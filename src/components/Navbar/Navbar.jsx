@@ -33,7 +33,7 @@ const NavbarComponent = () => {
                   .typeString(
                     'thblckjk' +
                       '<span style="color:var(--secondary)">.</span>' +
-                      '<span style="color:var(--primary)">dev</span>'
+                      '<span style="color:var(--primary)">tk</span>'
                   )
                   .start();
               }}
