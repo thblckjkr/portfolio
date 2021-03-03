@@ -14,9 +14,6 @@ export const navbarData = {
 // HERO DATA
 export const heroData = {
   title: 'Teo González Calzada',
-  name: '',
-  subtitle: '',
-  cta: '',
 
   technologies: ['Web', 'de Scripts', 'Backend', 'Frontend'],
 
@@ -45,7 +42,7 @@ export const aboutData = {
   img: 'profile.jpg',
   paragraphOne:
     'Desarrollador con experiencia en múltiples lenguajes, backend, frontend, desarrollo de escritorio, mantenimiento de servidores, networking, etc',
-  paragraphTwo: '',
+  paragraphTwo: 'Amante de la música, los videojuegos y el anime',
   paragraphThree: '',
   resume: '', // if no resume, the button will not show up
 };
@@ -65,6 +62,17 @@ export const projectsData = [
   },
   {
     id: nanoid(),
+    img: 'portfolio/jrzrobot.png',
+    title: 'Juarez Robot Challenge',
+    info:
+      'Webpage created for the Juarez Robot Challenge organization, that took place on the city of Juarez in 2019.',
+    info2:
+      'It inculded an admin page with information of the signups, and other tools (Site is down, link to archive.org)',
+    url: 'https://web.archive.org/web/20190427025406/http://juarezrobotchallenge.com/',
+    // repo: '', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
     img: 'portfolio/servers.png',
     title: 'Servers Monitor',
     info:
@@ -81,7 +89,7 @@ export const projectsData = [
     info:
       ' A real-time chat interface made with Socket.IO (based on NodeJS on the server side), and with material design by google on the front end. JQuery on the front-end for comunicate with the server and HTML5 on the base of the chat. Also the project was integrated with an old PHP-MySQL login of another system.',
     info2:
-      "This project was created to decrease the response time between areas. The chat doesn't save the conversations on a database, but every login and interaction metadata its saved on logs.",
+      "This project was created to decrease the response time between areas. The chat doesn't save the conversations on a database, but every login and interaction metadata is saved on a log.",
     url: '',
     repo: '', // if no repo, the button will not show up
   },
