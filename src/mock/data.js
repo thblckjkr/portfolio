@@ -9,7 +9,7 @@ export const headData = {
 
 export const navbarData = {
   language: 'en',
-  address: 'teogonzalez.dev_',
+  address: 'teogonzalez.dev',
 };
 
 // HERO DATA

@@ -6,7 +6,8 @@ import PortfolioContext from '../../context/context';
 
 const NavbarComponent = () => {
   const { navbar } = useContext(PortfolioContext);
-  // const { name } = navbar;
+  const { language } = navbar; // TODO: Get the address and split it
+  const parts = 'teogonzalez.dev'.split('.');
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -31,9 +32,8 @@ const NavbarComponent = () => {
               onInit={(typewriter) => {
                 typewriter
                   .typeString(
-                    'thblckjk' +
-                      '<span style="color:var(--secondary)">.</span>' +
-                      '<span style="color:var(--primary)">tk</span>'
+                    `${parts[0]}<span style='color:var(--secondary)'>.</span>` +
+                      `<span style="color:var(--primary)">${parts[1]}</span>`
                   )
                   .start();
               }}
@@ -42,8 +42,8 @@ const NavbarComponent = () => {
         </Fade>
       </a>
       <div className="language">
-        <i className="fa fa-language text-primary" />
-        ES
+        <i className="fa fa-language text-primary px-2" />
+        {language}
       </div>
     </navbar>
   );

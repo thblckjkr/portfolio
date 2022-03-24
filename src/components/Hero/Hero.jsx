@@ -29,15 +29,11 @@ const Header = () => {
           <h1 className="hero-title md-auto text-center">{title}</h1>
           <h3 className="hero-subtitle">
             <span className="text-secondary">{'<'}</span>
-            Desarrollador&nbsp;
             {technologies && (
-              <TextLoop
-                className="text-primary"
-                interval={2500}
-                adjustingSpeed={200}
-                children={technologies}
-              />
+              <TextLoop className="" interval={2500} adjustingSpeed={200} children={technologies} />
             )}
+            &nbsp;
+            <span className="text-primary">developer</span>
             <span className="text-secondary">{'/>'}</span>
           </h3>
 
