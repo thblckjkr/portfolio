@@ -3,19 +3,19 @@ import { nanoid } from 'nanoid';
 // HEAD DATA
 export const headData = {
   title: 'Teo González Calzada | thblckjkr.tk', // e.g: 'Name | Developer'
-  lang: 'en', // e.g: en, es, fr, jp
-  description: 'Developer', // e.g: Welcome to my website
+  lang: 'es', // e.g: en, es, fr, jp
+  description: 'Desarrollador', // e.g: Welcome to my website
 };
 
 export const navbarData = {
-  language: 'en',
-  address: 'teogonzalez.dev_',
+  name: 'teogonzalez.dev_',
 };
 
 // HERO DATA
 export const heroData = {
   title: 'Teo González Calzada',
-  technologies: ['Web', 'Scripts', 'Pipelines', 'Backend', 'Frontend'],
+
+  technologies: ['Web', 'de Scripts', 'Backend', 'Frontend'],
 
   networks: [
     // {
@@ -41,8 +41,8 @@ export const aboutData = {
   title: 'About me',
   img: 'profile.jpg',
   paragraphOne:
-    'Developer with experience in multiple languages, backend, frontend, desktop development, server maintenance, networking, etc',
-  paragraphTwo: 'I love music, video games and anime.',
+    'Desarrollador con experiencia en múltiples lenguajes, backend, frontend, desarrollo de escritorio, mantenimiento de servidores, networking, etc',
+  paragraphTwo: 'Amante de la música, los videojuegos y el anime',
   paragraphThree: '',
   resume: '', // if no resume, the button will not show up
 };
@@ -51,30 +51,10 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'portfolio/POS.png',
-    title: 'Custom POS',
-    info:
-      "Custom POS, made with Flutter, that connects to a device that has it's own custom local wifi network.",
-    info2: "The extension had a good impact, almost 700 unique users on it's first week.",
-    // url:'',
-  },
-  {
-    id: nanoid(),
-    img: 'portfolio/insomnia.png',
-    title: 'Insomnia Gitlab extension',
-    info:
-      "A extension for insomnia that let's you store your API requests on a gist on github or gitlab. Providing a simple and easy way to share your API requests, for free.",
-    info2:
-      'This extension started as a fork of a similar extension that worked only with github, and rewrote it to work with gitlab and support multiple provviders. It was one of the most downloaded extensions for about a year.',
-    url: 'https://insomnia.rest/plugins/insomnia-plugin-sync-gist-multiprovider',
-    repo: 'https://github.com/thblckjkr/insomnia-plugin-sync-gist-multiprovider', // if no repo, the button will not show up
-  },
-  {
-    id: nanoid(),
     img: 'portfolio/extension.png',
-    title: 'UACJ assignments',
+    title: 'Extensión para selección de materias UACJ',
     info:
-      'A little chrome extension to make possible the automatic schedule for academics. The extension was made trying to keep in mind simplicity and cleaness.',
+      'Una extensión de Google Chrome que permite seleccionar las materias que desea cursar en la UACJ, convirtiendo la lista de posibles materias en una lista corta de materias que le pueden interesar al alumno.',
     info2: "The extension had a good impact, almost 700 unique users on it's first week.",
     url:
       'https://chrome.google.com/webstore/detail/uajrz-schedule/hjfghlbhpighbjohdmhinpoehnoipdag',
@@ -85,16 +65,16 @@ export const projectsData = [
     img: 'portfolio/jrzrobot.png',
     title: 'Juarez Robot Challenge',
     info:
-      'Webpage created for the Juarez Robot Challenge organization, that took place at the city of Juarez in 2019.',
+      'Página web creada para la organización Juarez Robot Challenge, que se llevó a cabo en ciudad de Juarez en 2019.',
     info2:
-      'It inculded an admin page with information of the signups, and other tools (Site is down, link to archive.org)',
+      'Incluía una página de administración con información de las inscripciones, y otras herramientas (Sitio web caído, enlace a archive.org)',
     url: 'https://web.archive.org/web/20190427025406/http://juarezrobotchallenge.com/',
     // repo: '', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
     img: 'portfolio/servers.png',
-    title: 'Servers Monitor',
+    title: 'Monitoreo de servidores',
     info:
       "This project only works with PHP and MySQL on the backend, and a little bit of HTML, Bootstrap and JQuery on the frontend. It's fully compatible with any linux distribution and only needs SSH access to the server. Also, it doesn't install anything on the servers.",
     info2:
@@ -117,10 +97,10 @@ export const projectsData = [
 
 // CONTACT DATA
 export const contactData = {
-  title: 'Contact Me',
-  cta: '¿Would you like to contact me?',
-  btn: "Let's talk!",
-  email: 'contact@thblckjkr.tk',
+  title: 'Contacto',
+  cta: '¿Te gustaría contactarme?',
+  btn: '¡Hablemos!',
+  email: 'thblckjkr@hotmail.com',
 };
 
 // FOOTER DATA
