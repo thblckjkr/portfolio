@@ -54,8 +54,9 @@ export const projectsData = [
     img: 'portfolio/POS.png',
     title: 'Custom POS',
     info:
-      "Custom POS, made with Flutter, that connects to a device that has it's own custom local wifi network.",
-    info2: "The extension had a good impact, almost 700 unique users on it's first week.",
+      "Custom POS, made with Flutter, that connects to a device that has it's own custom local wifi network, server and database.",
+    info2:
+      'The main server is in linux, and is the app is completely written in Dart, and is multiplatform.',
     // url:'',
   },
   {
@@ -63,9 +64,9 @@ export const projectsData = [
     img: 'portfolio/insomnia.png',
     title: 'Insomnia Gitlab extension',
     info:
-      "A extension for insomnia that let's you store your API requests on a gist on github or gitlab. Providing a simple and easy way to share your API requests, for free.",
+      "An extension for insomnia that let's you store your API requests on a gist on github or gitlab. Providing a simple and easy way to share your API requests, for free.",
     info2:
-      'This extension started as a fork of a similar extension that worked only with github, and rewrote it to work with gitlab and support multiple provviders. It was one of the most downloaded extensions for about a year.',
+      'This extension started as a fork of a similar extension that worked only with github, and rewrote it to work with gitlab and support multiple providers. It was one of the most downloaded extensions for about a year.',
     url: 'https://insomnia.rest/plugins/insomnia-plugin-sync-gist-multiprovider',
     repo: 'https://github.com/thblckjkr/insomnia-plugin-sync-gist-multiprovider', // if no repo, the button will not show up
   },
