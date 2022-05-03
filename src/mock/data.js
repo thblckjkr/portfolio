@@ -51,6 +51,16 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
+    img: 'portfolio/meteoreo.png',
+    title: 'Meteoreo',
+    info:
+      'Meteoreo is a service that monitors the meteorological stations in a defined network, and provides a graphical interface to visualize the data.',
+    info2: 'Made with Python, Masonite ORM and FastAPI, and the frontend was made with VueJS.',
+    url: 'http://cecatev.uacj.mx/meteoreo/',
+    repo: 'https://github.com/thblckjkr/meteoreo-api/',
+  },
+  {
+    id: nanoid(),
     img: 'portfolio/POS.png',
     title: 'Custom POS',
     info:
