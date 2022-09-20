@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export loaded ua-phantomjs reveal-viewport theme-font-montserrat theme-color-white-blue">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>DevOps - TGC</title>
+		<meta name="description" content="Slides">
+		<link rel="stylesheet" href="css/reveal.css">
+		<!-- <link rel="stylesheet" href="css/term.css"> -->
+		<link rel="stylesheet" href="css/highlight.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<style id="user-css-output" type="text/css"></style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines -->
+				<section data-markdown="devops.0.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+
+            <section>
+               <section>
+                  Ejemplo, construcción de una aplicación de <i>Flutter</i> en <i>GitlabCI</i>
+               </section>
+
+               <section data-auto-animate>
+                  <pre><code data-line-numbers="1-3|5-7|10|14-23|25-32">stages:
+   - test
+   - package
+   
+variables:
+   LC_ALL: "en_US.UTF-8"
+   LANG: "en_US.UTF-8"
+
+.android_docker_image:
+   image: cirrusci/flutter:1.22.6
+   tags:
+      - docker
+
+test:
+   extends: .android_docker_image
+   stage: test
+   script:
+      - flutter test --coverage
+      - genhtml coverage/lcov.info --output=coverage
+   artifacts:
+      paths:
+         - coverage/
+      expire_in: 5 days
+
+build_android:
+   stage: package
+   extends: .android_docker_image
+   script: flutter build apk --release --build-number=$CI_PIPELINE_ID
+   artifacts:
+      paths:
+         - build/app/outputs/apk/release/app-release.apk
+      expire_in: 1 day
+                  </code></pre>
+               </section>
+            </section>
+
+				<section data-markdown="devops.1.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+			</div>
+		</div>
+		
+    <script>
+        var SLConfig = {
+            "deck": {}
+        };
+    </script>
+		
+		<!-- <script src="lib/js/head.min.js"></script> -->
+		<!-- <script src="js/reveal.js"></script> -->
+      <script src="https://cdn.jsdelivr.net/npm/headjs@1.0.3/dist/1.0.0/head.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/js/reveal.min.js"></script>
+
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+
+				controls: true,
+				progress: true,
+				history: true,
+				mouseWheel: false,
+				// showNotes: 'separate-page',
+				slideNumber: false,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				rollingLinks: false,
+				center: true,
+				shuffle: SLConfig.deck.shuffle || false,
+				loop: SLConfig.deck.should_loop || false,
+				rtl: SLConfig.deck.rtl || false,
+
+				transition: SLConfig.deck.transition,
+				backgroundTransition: SLConfig.deck.background_transition,
+
+				pdfMaxPagesPerSlide: 1,
+				
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/notes/notes.js' }
+				],
+			});
+
+			if( window.hljs ) hljs.initHighlightingOnLoad();
+		</script>
+	</body>
+</html>
